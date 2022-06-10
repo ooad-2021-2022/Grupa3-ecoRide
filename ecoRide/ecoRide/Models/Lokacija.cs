@@ -13,11 +13,7 @@ namespace ecoRide.Models
         public string imeLokacije { get; set; }
        
         public string adresa { get; set; }
-        
-        
-
-        public Korisnik()
-        { }
+      
 
     }
     
