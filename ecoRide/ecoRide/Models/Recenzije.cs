@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace MindHealth.Models
+namespace ecoRide.Models
 {
     public class Korisnik
     {
