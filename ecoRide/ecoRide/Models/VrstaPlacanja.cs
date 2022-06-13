@@ -9,9 +9,7 @@ namespace ecoRide.Models
         [Key]
         public int Id { get; set; }
         public string VrstaPlacanja { get; set; }
-        
-         public Korisnik()
-        { }
+    
 
     }
 

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ecoRide.Models
 {
-    public class Korisnik
+    public class Recenzije
     {
         [Key]
         public int Id { get; set; }
@@ -14,9 +14,6 @@ namespace ecoRide.Models
 
         [ForeignKey("korisnik")]
         public Korisnik korisnik { get; set; }
-
-        public Korisnik()
-        { }
 
     }
 

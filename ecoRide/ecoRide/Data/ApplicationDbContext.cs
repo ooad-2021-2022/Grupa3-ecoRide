@@ -21,7 +21,8 @@ namespace ecoRide.Data
         public DbSet<Korisnik> Korisnik { get; set; }
         public DbSet<Lokacija> Lokacija { get; set; }
         public DbSet<Recenzije> Recenzije { get; set; }
-        public DbSet<VrstaVozila> VrstaVozila { get; set; }
+        public DbSet<VrstaPlacanja> VrstaPlacanja { get; set; }
+ 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -32,7 +33,7 @@ namespace ecoRide.Data
             modelBuilder.Entity<Korisnik>().ToTable("Korisnik");
             modelBuilder.Entity<Lokacija>().ToTable("Lokacija");
             modelBuilder.Entity<Recenzije>().ToTable("Recenzije");
-            modelBuilder.Entity<VrstaVozila>().ToTable("VrstaVozila");
+            modelBuilder.Entity<VrstaPlacanja>().ToTable("VrstaPlacanja");
             base.OnModelCreating(modelBuilder);
         }
     }
