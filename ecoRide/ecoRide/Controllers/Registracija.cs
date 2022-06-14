@@ -10,11 +10,11 @@ using ecoRide.Models;
 
 namespace ecoRide.Controllers
 {
-    public class KorisnikController : Controller
+    public class Registracija : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public KorisnikController(ApplicationDbContext context)
+        public Registracija(ApplicationDbContext context)
         {
             _context = context;
         }

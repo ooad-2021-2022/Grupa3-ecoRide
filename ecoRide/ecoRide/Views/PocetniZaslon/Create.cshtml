@@ -1,0 +1,47 @@
+﻿@model ecoRide.Models.Izvjestaj
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Izvjestaj</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="BrojPotrosenihKalorija" class="control-label"></label>
+                <input asp-for="BrojPotrosenihKalorija" class="form-control" />
+                <span asp-validation-for="BrojPotrosenihKalorija" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UstedaNovca" class="control-label"></label>
+                <input asp-for="UstedaNovca" class="form-control" />
+                <span asp-validation-for="UstedaNovca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SmanjenjeEmisijeCO2" class="control-label"></label>
+                <input asp-for="SmanjenjeEmisijeCO2" class="form-control" />
+                <span asp-validation-for="SmanjenjeEmisijeCO2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KorisnikID" class="control-label"></label>
+                <select asp-for="KorisnikID" class ="form-control" asp-items="ViewBag.KorisnikID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
