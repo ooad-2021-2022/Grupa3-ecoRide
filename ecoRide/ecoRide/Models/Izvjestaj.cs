@@ -8,17 +8,13 @@ namespace ecoRide.Models
     {
         [Key]
         public int Id { get; set; }
-        public int brojPotrosenihKalorija { get; set; }
-        public string ustedaNovca { get; set; }
-        public string smanjenjeEmisijeCO2 { get; set; }
+        public int BrojPotrosenihKalorija { get; set; }
+        public string UstedaNovca { get; set; }
+        public string SmanjenjeEmisijeCO2 { get; set; }
 
-        [ForeignKey("korisnik")]
-        public Korisnik korisnik { get; set; }
-        
-
-        public Korisnik()
-        { }
-
+        [ForeignKey("Korisnik")]
+        public Korisnik Korisnik { get; set; }
+   
     }
 
 }

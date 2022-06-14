@@ -8,12 +8,11 @@ namespace ecoRide.Models
     {
         [Key]
         public int Id { get; set; }
-        public string ocjena { get; set; }
-        public string komentar { get; set; }
+        public string Ocjena { get; set; }
+        public string Komentar { get; set; }
 
-
-        [ForeignKey("korisnik")]
-        public Korisnik korisnik { get; set; }
+        [ForeignKey("Korisnik")]
+        public Korisnik Korisnik { get; set; }
 
     }
 

@@ -6,29 +6,23 @@ namespace ecoRide.Models
 {
     public class Korisnik
     {
-        [Key]
-     
+        public DateTime DatumRodjenja { get; set; }
         public string AdresaStanovanja { get; set; }
-        public string brojTelefona{ get; set; }
+        public string BrojTelefona{ get; set; }
         public string BrojRacunaKorisnika { get; set; }
-        public DateTime datumRodjenja { get; set; }
-        public int brojKredita { get; set; }
+        public string BrojKredita { get; set; }
         public bool DaLiJeGoldenAge { get; set; }
-        public int Rezervacija{ get; set; }
-        public string Lokacija { get; set; }
-
-        public string GoldenagePogodnosti { get; set; }
-        public string preferiranoPlacanje { get; set; }
-       
-        public string id { get; set; }
-        public int idKorisnika { get; set; }
-        public string ime { get; set; }
-        public string prezime { get; set; }
-        public string email { get; set; }
-
-
-        public Korisnik()
-        { }
+        [ForeignKey("Lokacija")]
+        public Lokacija Lokacija { get; set; }
+        [ForeignKey("GoldenAgePogodnosti")]
+        public GoldenAgePogodnosti GoldenAgePogodnosti { get; set; }
+        [ForeignKey("VrstaPlacanja")]
+        public VrstaPlacanja VrstaPlacanja { get; set; }
+        [Key]
+        public int Id { get; set; }
+        public string Ime { get; set; }
+        public string Prezime { get; set; }
+        public string Email { get; set; }
 
     }
     

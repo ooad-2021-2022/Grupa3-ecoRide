@@ -8,11 +8,10 @@ namespace ecoRide.Models
     {
         [Key]
         public int Id { get; set; }
-        public string geografskaSirina { get; set; }
-        public string geografskaDuzina { get; set; }
-        public string imeLokacije { get; set; }
-       
-        public string adresa { get; set; }
+        public string GeografskaSirina { get; set; }
+        public string GeografskaDuzina { get; set; }
+        public string ImeLokacije { get; set; }
+        public string Adresa { get; set; }
       
 
     }

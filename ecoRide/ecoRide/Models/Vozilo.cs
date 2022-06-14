@@ -8,12 +8,10 @@ namespace ecoRide.Models
     {
         [Key]
         public int Id { get; set; }
-        public string cijenaKarte { get; set; }
+        public string CijenaKarte { get; set; }
 
         [ForeignKey("VrstaVozila")]
-        public VrstaVozila vrstaVozila { get; set; }
-
-        public int VrstaVozila { get; set; }
+        public VrstaVozila VrstaVozila { get; set; }
 
     }
 }
