@@ -12,6 +12,7 @@ namespace ecoRide.Models
         public string Komentar { get; set; }
 
         [ForeignKey("Korisnik")]
+        public int KorisnikId { get; set; }
         public Korisnik Korisnik { get; set; }
 
     }

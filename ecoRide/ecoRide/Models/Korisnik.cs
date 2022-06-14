@@ -13,10 +13,13 @@ namespace ecoRide.Models
         public string BrojKredita { get; set; }
         public bool DaLiJeGoldenAge { get; set; }
         [ForeignKey("Lokacija")]
+        public int LokacijaId { get; set; }
         public Lokacija Lokacija { get; set; }
         [ForeignKey("GoldenAgePogodnosti")]
+        public int GoldenAgePogodnostiId { get; set; }
         public GoldenAgePogodnosti GoldenAgePogodnosti { get; set; }
         [ForeignKey("VrstaPlacanja")]
+        public int VrstaPlacanjaId { get; set; }
         public VrstaPlacanja VrstaPlacanja { get; set; }
         [Key]
         public int Id { get; set; }

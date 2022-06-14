@@ -11,6 +11,7 @@ namespace ecoRide.Models
         public string CijenaKarte { get; set; }
 
         [ForeignKey("VrstaVozila")]
+        public int VrstaVozilaId { get; set; }
         public VrstaVozila VrstaVozila { get; set; }
 
     }

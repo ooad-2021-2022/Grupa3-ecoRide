@@ -8,11 +8,11 @@ namespace ecoRide.Models
     {
         [Key]
         public int Id { get; set; }
-        public DateTime vrijeme { get; set; }
-        public Lokacija lokacija { get; set; }
+        public DateTime Vrijeme { get; set; }
+        public Lokacija Lokacija { get; set; }
 
         [ForeignKey("Korisnik")]
-        public int KorisnikID { get; set; }
+        public int KorisnikId { get; set; }
         public Korisnik Korisnik { get; set; }
     }
 }

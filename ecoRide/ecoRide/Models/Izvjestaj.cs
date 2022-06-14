@@ -13,6 +13,7 @@ namespace ecoRide.Models
         public string SmanjenjeEmisijeCO2 { get; set; }
 
         [ForeignKey("Korisnik")]
+        public int KorisnikID { get; set; }
         public Korisnik Korisnik { get; set; }
    
     }
