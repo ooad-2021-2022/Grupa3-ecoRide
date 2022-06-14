@@ -1,0 +1,99 @@
+﻿@model ecoRide.Models.Korisnik
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Korisnik</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DatumRodjenja" class="control-label"></label>
+                <input asp-for="DatumRodjenja" class="form-control" />
+                <span asp-validation-for="DatumRodjenja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdresaStanovanja" class="control-label"></label>
+                <input asp-for="AdresaStanovanja" class="form-control" />
+                <span asp-validation-for="AdresaStanovanja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BrojTelefona" class="control-label"></label>
+                <input asp-for="BrojTelefona" class="form-control" />
+                <span asp-validation-for="BrojTelefona" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BrojRacunaKorisnika" class="control-label"></label>
+                <input asp-for="BrojRacunaKorisnika" class="form-control" />
+                <span asp-validation-for="BrojRacunaKorisnika" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BrojKredita" class="control-label"></label>
+                <input asp-for="BrojKredita" class="form-control" />
+                <span asp-validation-for="BrojKredita" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="DaLiJeGoldenAge" /> @Html.DisplayNameFor(model => model.DaLiJeGoldenAge)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="LokacijaId" class="control-label"></label>
+                <select asp-for="LokacijaId" class="form-control" asp-items="ViewBag.LokacijaId"></select>
+                <span asp-validation-for="LokacijaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GoldenAgePogodnostiId" class="control-label"></label>
+                <input asp-for="GoldenAgePogodnostiId" class="form-control" />
+                <span asp-validation-for="GoldenAgePogodnostiId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GoldenAgePogodnosti" class="control-label"></label>
+                <select asp-for="GoldenAgePogodnosti" class="form-control"></select>
+                <span asp-validation-for="GoldenAgePogodnosti" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VrstaPlacanjaId" class="control-label"></label>
+                <input asp-for="VrstaPlacanjaId" class="form-control" />
+                <span asp-validation-for="VrstaPlacanjaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VrstaPlacanja" class="control-label"></label>
+                <select asp-for="VrstaPlacanja" class="form-control"></select>
+                <span asp-validation-for="VrstaPlacanja" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Ime" class="control-label"></label>
+                <input asp-for="Ime" class="form-control" />
+                <span asp-validation-for="Ime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prezime" class="control-label"></label>
+                <input asp-for="Prezime" class="form-control" />
+                <span asp-validation-for="Prezime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

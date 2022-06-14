@@ -1,0 +1,105 @@
+﻿@model ecoRide.Models.Korisnik
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Korisnik</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DatumRodjenja)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DatumRodjenja)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AdresaStanovanja)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AdresaStanovanja)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BrojTelefona)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BrojTelefona)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BrojRacunaKorisnika)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BrojRacunaKorisnika)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BrojKredita)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BrojKredita)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DaLiJeGoldenAge)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DaLiJeGoldenAge)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lokacija)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lokacija.Id)
+        </dd class>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GoldenAgePogodnostiId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GoldenAgePogodnostiId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GoldenAgePogodnosti)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GoldenAgePogodnosti)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VrstaPlacanjaId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VrstaPlacanjaId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VrstaPlacanja)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VrstaPlacanja)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Prezime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Prezime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

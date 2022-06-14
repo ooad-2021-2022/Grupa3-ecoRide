@@ -1,0 +1,113 @@
+﻿@model IEnumerable<ecoRide.Models.Korisnik>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumRodjenja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdresaStanovanja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrojTelefona)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrojRacunaKorisnika)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrojKredita)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DaLiJeGoldenAge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lokacija)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoldenAgePogodnostiId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoldenAgePogodnosti)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VrstaPlacanjaId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VrstaPlacanja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prezime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumRodjenja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdresaStanovanja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrojTelefona)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrojRacunaKorisnika)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrojKredita)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DaLiJeGoldenAge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lokacija.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GoldenAgePogodnostiId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GoldenAgePogodnosti)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VrstaPlacanjaId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VrstaPlacanja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prezime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
