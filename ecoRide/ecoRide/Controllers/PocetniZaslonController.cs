@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ecoRide.Data;
 using ecoRide.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ecoRide.Controllers
 {
+    [Authorize]
     public class PocetniZaslonController : Controller
     {
         private readonly ApplicationDbContext _context;
