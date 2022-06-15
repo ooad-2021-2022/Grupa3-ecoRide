@@ -28,14 +28,50 @@ style="position:relative;width:1280px;height:400px;"></div>
             visible: false
         });
         infobox.setMap(map);
-        var etf = new Microsoft.Maps.Location(43.8563, 18.3959);
+        var etf = new Microsoft.Maps.Location(43.829078,18.3423);
         var pin = new Microsoft.Maps.Pushpin(etf);
         pin.metadata = {
-            title: 'ETF',
-            description: 'Elektrotehnički fakultet u Sarajevu'
+            title: 'Stanica br.1',
+            description: 'Dobrinja'
         };
         Microsoft.Maps.Events.addHandler(pin, 'click', pushpinClicked);
         map.entities.push(pin);
+        var otoka = new Microsoft.Maps.Location(43.84728,18.36545);
+        var pin = new Microsoft.Maps.Pushpin(otoka);
+        pin.metadata = {
+            title: 'Stanica br.2',
+            description: 'Otoka'
+        };
+        Microsoft.Maps.Events.addHandler(pin, 'click', pushpinClicked);
+        map.entities.push(pin);
+
+        var kolonija = new Microsoft.Maps.Location(43.812853,18.3076);
+        var pin = new Microsoft.Maps.Pushpin(kolonija);
+        pin.metadata = {
+            title: 'Stanica br.3',
+            description: 'Sokolovic Kolonija'
+        };
+        Microsoft.Maps.Events.addHandler(pin, 'click', pushpinClicked);
+        map.entities.push(pin);
+        var scc = new Microsoft.Maps.Location(43.855465,18.408043);
+        var pin = new Microsoft.Maps.Pushpin(scc);
+        pin.metadata = {
+            title: 'Stanica br.4',
+            description: 'Sarajevo City Centar'
+        };
+        Microsoft.Maps.Events.addHandler(pin, 'click', pushpinClicked);
+        map.entities.push(pin);
+       
+        var ritual = new Microsoft.Maps.Location( 43.829548,18.358904);
+        var pin = new Microsoft.Maps.Pushpin(ritual);
+        pin.metadata = {
+            title: 'Stanica br.5',
+            description: 'RiTual'
+        };
+        Microsoft.Maps.Events.addHandler(pin, 'click', pushpinClicked);
+        map.entities.push(pin);
+
+
     }
     function pushpinClicked(e) {
         if (e.target.metadata) {
