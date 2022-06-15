@@ -6,3 +6,45 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<div style="margin-top: 2%; margin-bottom: 2% ">
+ <div id="myMap"
+style="position:relative;width:1280px;height:400px;"></div>
+</div> 
+
+<script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
+    
+<script type='text/javascript'>
+    function GetMap()
+    {
+        var map = new Microsoft.Maps.Map('#myMap', {
+            credentials: 'Aqmgtdjtqe3ceT2ai7xuYevx46TyJ5SFik3P4BNMjFxLe6IM03fMZK69IzBU4U5Y',
+            center: new Microsoft.Maps.Location(43.8563, 18.4131),
+            mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+            zoom: 10
+        });
+        
+        infobox = new Microsoft.Maps.Infobox(map.getCenter(), {
+            visible: false
+        });
+        infobox.setMap(map);
+        var etf = new Microsoft.Maps.Location(43.8563, 18.3959);
+        var pin = new Microsoft.Maps.Pushpin(etf);
+        pin.metadata = {
+            title: 'ETF',
+            description: 'Elektrotehnički fakultet u Sarajevu'
+        };
+        Microsoft.Maps.Events.addHandler(pin, 'click', pushpinClicked);
+        map.entities.push(pin);
+    }
+    function pushpinClicked(e) {
+        if (e.target.metadata) {
+            infobox.setOptions({
+                location: e.target.getLocation(),
+                title: e.target.metadata.title,
+                description: e.target.metadata.description,
+                visible: true
+            });
+        }
+    }   
+</script>
