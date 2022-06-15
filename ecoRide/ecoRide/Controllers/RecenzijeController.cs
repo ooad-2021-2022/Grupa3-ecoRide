@@ -125,6 +125,7 @@ namespace ecoRide.Controllers
         }
 
         // GET: Recenzije/Delete/5
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -144,6 +145,7 @@ namespace ecoRide.Controllers
         }
 
         // POST: Recenzije/Delete/5
+        [Authorize(Roles = "Administrator")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

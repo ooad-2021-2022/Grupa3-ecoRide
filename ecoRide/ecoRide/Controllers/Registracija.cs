@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ecoRide.Data;
 using ecoRide.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ecoRide.Controllers
 {
@@ -123,6 +124,7 @@ namespace ecoRide.Controllers
         }
 
         // GET: Korisnik/Delete/5
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -142,6 +144,7 @@ namespace ecoRide.Controllers
         }
 
         // POST: Korisnik/Delete/5
+        [Authorize(Roles = "Administrator")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
